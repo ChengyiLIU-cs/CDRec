@@ -1,0 +1,46 @@
+
+dataset: ciao
+seed: 42
+epoches: 1000
+batch_size: 1024
+test_batch_size: 1024
+topks: '[20,10,5]'
+
+emb_dim: 256
+lr: 0.0001
+ui_n_layers: 3
+ui_dropout: True
+keep_prob_ui: 0.9
+weight_decay: 0.0001
+
+schedule_type: linear
+sigma_min: 0.0001
+sigma_max: 1.0
+item_freq_lambda: 0.5 # 0.5
+gaussian_scale: 10
+num_step: 30
+
+consistency_scale: 10   # num_step/ length
+consistency_mode: euler_solver    #freq_inference(one-step recovery), euler_solver(pseudo-Euler ), p_reverse
+consistency_loss_type: 'kl'
+beta_consistency: 0.5 
+consistency_loss_lambda: 0.4
+ema_rate: 0.999 
+
+ssl_loss_lambda: 0.08 
+tau: 0.6 
+
+sampling_scale: 0 # 0 for single-step generation
+sampling_type: recover
+sampling_num_step: 30
+
+aggregation_type: mean
+timestep: layerwise
+
+
+
+
+
+
+
+

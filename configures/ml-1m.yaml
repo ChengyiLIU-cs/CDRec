@@ -1,0 +1,42 @@
+
+dataset: ml-1m
+seed: 42
+epoches: 1000
+batch_size: 1024
+test_batch_size: 2048
+topks: '[20,10,5]'
+
+emb_dim: 256
+lr: 0.0001
+ui_n_layers: 3
+ui_dropout: True
+keep_prob_ui: 0.9
+weight_decay: 0.0001   # 0.0001
+
+schedule_type: linear
+sigma_min: 0.0001
+sigma_max: 1.0
+item_freq_lambda: 0.8 # 0.5
+gaussian_scale: 10  # gaussian_sigma = self.num_steps / world.args.gaussian_scale
+num_step: 30
+
+consistency_scale: 5 
+consistency_mode: euler_solver   
+consistency_loss_type: 'kl' # 'cross_entropy' 'kl'
+beta_consistency: 0.7  
+consistency_loss_lambda: 0.15 
+ema_rate: 0.99
+
+ssl_loss_lambda: 0.1
+tau: 0.6 # 0.6
+
+sampling_scale: 3 
+sampling_type: recover  # agg
+sampling_num_step: 5
+
+aggregation_type: mean
+timestep: layerwise
+
+
+
+
