@@ -18,3 +18,11 @@ Run the code with: python main.py --dataset Dianping
   booktitle = {Proceedings of the Nineteenth ACM International Conference on Web Search and Data Mining},
   }
 ```
+```bibtex
+@article{liu2025continuous,
+  title={Continuous-time Discrete-space Diffusion Model for Recommendation},
+  author={Liu, Chengyi and Chen, Xiao and Wang, Shijie and Fan, Wenqi and Li, Qing},
+  journal={arXiv preprint arXiv:2511.12114},
+  year={2025}
+}
+```
